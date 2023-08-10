@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.scss": "scss",
+        ".env.local": "xsl",
+        "iostream": "cpp"
+    }
+}
