@@ -21,7 +21,7 @@ int main()
 
     int beg = 0, end = n - 1;
 
-    for (int i = beg; i <= end; i++)
+    for (int i = beg; i <= end;)
     {
         int mid = (beg + end) / 2;
 
