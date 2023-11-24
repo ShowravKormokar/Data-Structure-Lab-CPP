@@ -5,28 +5,28 @@ int partition(int arr[], int low, int high)
 {
     int pivot = arr[high];
     int i = low - 1;
-    for (int j = low; j < high; j++)
+    for (int j = low; j < high; j++) // j=1 2
     {
-        if (arr[j] > pivot)
+        if (arr[j] > pivot) // 6 > 4;
         {
-            i++;
+            i++; // 1
             int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
+            arr[i] = arr[j]; // 5
+            arr[j] = temp;   // 5
         }
     }
     int temp = arr[i + 1];
-    arr[i + 1] = arr[high];
-    arr[high] = temp;
-    return i + 1;
+    arr[i + 1] = arr[high]; //
+    arr[high] = temp;       // 2
+    return i + 1;           // 4
 }
-void quickSort(int arr[], int low, int high)
+void quickSort(int arr[], int low, int high) // 5 6 9 4 3 1 2//5694312
 {
     if (low < high)
     {
-        int pivotIndex = partition(arr, low, high);
-        quickSort(arr, low, pivotIndex - 1);
-        quickSort(arr, pivotIndex + 1, high);
+        int pivotIndex = partition(arr, low, high); // 4
+        quickSort(arr, low, pivotIndex - 1);        // array left side sort, until it can not be sorted
+        quickSort(arr, pivotIndex + 1, high);       // array right side sort, until it can not be sorted
     }
 }
 int main()
